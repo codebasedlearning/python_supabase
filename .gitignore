@@ -1,0 +1,21 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# python
+.venv/
+__pycache__/
+*.egg-info/
+.ruff_cache/
+
+# supabase cli
+supabase/.temp/
+supabase/.branches/
+
+# exports / downloads
+catalog.json
+downloads/
+
+# private notes with credentials
+supabase.md

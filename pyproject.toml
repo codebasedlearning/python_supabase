@@ -1,0 +1,24 @@
+[project]
+name = "sbcli"
+version = "0.1.0"
+description = "CLI to run a Supabase project: auth, users, product catalog, pictures, group chat, schema scripts"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "A. Voss", email = "a.voss@fh-aachen.de" }]
+dependencies = [
+  "supabase>=2.20,<3",
+  "typer>=0.12",
+  "rich>=13.7",
+  "psycopg[binary]>=3.2",
+  "python-dotenv>=1.0",
+]
+
+[project.scripts]
+sbcli = "sbcli.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sbcli"]
